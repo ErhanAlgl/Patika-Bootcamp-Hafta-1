@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Form - Patika</title>
+</head>
+
+<body>
+    <h2>Patika Kayıt Formu</h2>
+
+    <!--Start Form-->
+    <form>
+        <fieldset>
+            <legend>Kişisel Bilgiler:</legend>
+            <!-- Name/Surname Input -->
+            <div>
+                <label for="name">Ad:</label> <br>
+                <input type="text" name="name" id="name" required> <br>
+                <label for="surname">Soyad:</label> <br>
+                <input type="text" name="surname" id="surname" required>
+            </div>
+
+            <!-- Mail Input -->
+            <div>
+                <label for="email">E-posta:</label> <br>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <!-- Password Input -->
+            <div>
+                <label for="password">Şifre:</label> <br>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <!-- Gender Input -->
+            <div>
+                <label for="gender">Cinsiyet:</label>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Erkek</label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Kadın</label>
+            </div>
+
+
+            <!-- Favorites Input -->
+            <div>
+                <label for="favotites">Favori Meyveni Seç</label>
+                <select id="favotites" name="favotites">
+                    <option value="elma">Seçiniz</option>
+                    <option value="elma">Elma</option>
+                    <option value="muz">Muz</option>
+                    <option value="Çilek">Çilek</option>
+                    <option value="Karpuz">Karpuz</option>
+                    <option value="Kivi">Kivi</option>
+                </select>
+            </div>
+
+            <!-- Message Input -->
+            <div>
+                <label for="message">Mesaj:</label>
+                <br>
+                <textarea name="message"></textarea>
+            </div>
+
+            <!-- Submit Buttons -->
+            <div>
+                <button type="submit">Kayıt Ol</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
