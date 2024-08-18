@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../HTML/assets/thm.png"> <!-- Favicon eklendi -->
+    <title>Erhan Algül Kişisel Sayfa</title>
+    <style>
+        /* Sayfa içi CSS stilleri tanımla */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F4F4;
+            line-height: 1.6;
+            /* Satır yüksekliği eklendi */
+            margin: 0;
+            /* Satır kenar boşlukları sıfırlandı */
+            padding: 0 20px;
+            /* Sayfanın üst ve alt tarafına 0 sağ ve solunda 20px padding değeri veriyoruz */
+        }
+
+        header {
+            text-align: center;
+            background-color: #FFC161;
+            padding: 20px 0;
+            /* Alt ve üst taraftan 20px boşluk ekliyoruz */
+            color: #FFFFFF;
+        }
+
+        ul,
+        ol {
+            padding-left: 20px;
+            /* ul ve ol listelerine sol tarafa 20px boşluk bırakıyoruz. */
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Gölge ekleme */
+        }
+
+        img {
+            display: block;
+            /* img etiketinin bir blok öğesi gibi davranmasını sağlıyor */
+            margin: 0 auto;
+            /* img etiketini yatay olarak ortalar */
+            max-width: 200px;
+        }
+
+        figcaption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        .cat-pp {
+            width: 50px;
+            height: 50px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <header>
+            <h1>Patika+ Ödev-1</h1>
+        </header>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <figure>
+            <img src="../HTML/assets/profile-pic.png" alt="Erhan Algül">
+            <figcaption>Erhan ALGÜL</figcaption>
+        </figure>
+
+        <section>
+            <h2>Özgeçmiş</h2>
+            <p>Merhaba, ben Erhan. 1997 İstanbul doğumluyum. İstanbul'da yaşamaktayım. Marmara Üniversitesi Yönetim
+                Bilişim
+                Sistemleri mezunuyum. Hobilerim arasında kamp yapmak ve airsoft oynamak var.</p>
+        </section>
+
+        <section>
+            <h2>Eğitim</h2>
+            <ol>
+                <li>Marmara Üniversitesi - Yönetim Bilişim Sistemleri (2021)</li>
+                <li>Başakşehir Anadolu Lisesi (2016)</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>İş Deneyimi</h2>
+            <ol>
+                <li>E-Ticaret Uzmanı - HEKA lighting & design (2021-2024)</li>
+                <li>E-Ticaret Sorumlusu - Gri Market (2020-2021)</li>
+                <li>Web İçerik Geliştiricisi - Büyüteç Danışmanlık (2020)</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Yetenekler</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React</li>
+                <li>MySQL</li>
+            </ul>
+            <img class="cat-pp" src="../HTML/assets/ben.gif">
+        </section>
+
+        <section>
+            <h2>İletişim</h2>
+            <p>Email: <a href="mailto:erhanalgul3@gmail.com" target="_blank">erhanalgul3@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/erhan-algul/" target="_blank">Erhan Algül</a></p>
+            <p>GitHub: <a href="https://github.com/ErhanAlgl" target="_blank">Erhan Algül</a></p>
+        </section>
+    </main>
+
+    <!-- Footer  -->
+    <footer>
+        <section>
+            <h3>Adres</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25348.60163556265!2d-122.07885756553725!3d37.42351431550773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb76fdc5ad079%3A0x32bc76c4099c4fc0!2sGoogle%20Bay%20View!5e0!3m2!1str!2str!4v1724001122559!5m2!1str!2str"
+                width="600" height="450" style="border:0;" loading="lazy">
+            </iframe>
+        </section>
+    </footer>
+</body>
+
+</html>
