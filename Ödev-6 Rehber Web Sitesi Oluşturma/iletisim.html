@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        main {
+            flex: 1,
+        }
+
+        nav {
+            background-color: #FFC161;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: #111827;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FFFFFF;
+        }
+
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./index.html">Anasayfa</a>
+            <a href="./hakkimizda.html">Hakkımızda</a>
+            <a href="./servisler.html">Servisler</a>
+            <a href="./iletisim.html">İletişim</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>İletişim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ipsa voluptate! Tempore delectus,
+                beatae aperiam exercitationem, similique minima quaerat iure nulla corrupti corporis perspiciatis ullam
+                eligendi nostrum fugit incidunt excepturi ut maxime voluptatum esse, quibusdam magni. Vero, consectetur
+                omnis esse temporibus iste voluptate quam mollitia. Accusantium autem maiores quos cupiditate!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae neque quae consectetur architecto ipsa
+                odit, ratione tempora expedita qui officiis ducimus maxime eos nisi optio minus aspernatur dolorem, vel
+                eligendi, numquam praesentium repellat!</p>
+        </section>
+
+        <section>
+            <h2>İletişim</h2>
+            <ul>
+                <li>Mail: <a href="mailto:erhanalgul3@gmail.com">erhanalgul3@gmail.com</a></li>
+                <li>Telefon: <a href="tel:+905555555555">Telefon ile ara</a></li>
+            </ul>
+        </section>
+
+        <form>
+            <fieldset>
+                <legend>Mesaj Gönderin:</legend>
+                <div>
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email">
+                </div>
+                <div>
+                    <label for="phone">Telefon:</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div>
+                    <label for="address">Adres:</label>
+                    <textarea id="address" rows="3" cols="30"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Gönder</button>
+                </div>
+            </fieldset>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Patika+ Frontend Bootcamp. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
