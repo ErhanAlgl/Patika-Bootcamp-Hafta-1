@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Blog Sitesi</title>
+</head>
+
+<body>
+    <!-- Footer'ın  sayfa içeriği az olduğunda dahi en alta yapışması için wrapper ekledim. -->
+    <div id="wrapper">
+        <!-- HEADER Start -->
+        <header id="header">
+            <div class="container">
+                <div class="row-center">
+                    <h1>Blog Sitesi</h1>
+                    <nav id="nav">
+                        <ul>
+                            <li><a class="nav-items" href="index.html">Anasayfa</a></li>
+                            <li><a class="nav-items" href="post.html">Blog Gönderisi</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- BLOG Start -->
+        <section class="section">
+            <h2 class="section-title">Son Gönderiler</h2>
+            <div class="container-blog">
+                <article class="blog">
+                    <img src="https://picsum.photos/id/2/200/300" alt="Blog Post" width="200" height="300">
+                    <h3><a href="post.html">Blog Gönderisi Başlık 1</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam vitae sint quam atque
+                        impedit ut minus quisquam ducimus tempora.</p>
+                </article>
+                <article class="blog">
+                    <img src="https://picsum.photos/id/22/200/300" alt="Blog Post" width="200" height="300">
+                    <h3><a href="post.html">Blog Gönderisi Başlık 2</a></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam vitae sint quam atque
+                        impedit ut minus quisquam ducimus tempora.</p>
+                </article>
+            </div>
+        </section>
+        <!-- BLOG End -->
+    </div>
+
+    <footer>
+        &copy; 2024 Patika+ CSS
+    </footer>
+</body>
+
+</html>

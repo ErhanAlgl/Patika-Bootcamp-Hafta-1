@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Functions</title>
+    <style>
+        :root {
+            --height: 100px;
+            --primary-color: blueviolet
+        }
+
+        .calc {
+            width: calc(50% + 50px);
+            height: var(--height);
+            background-color: var(--primary-color)
+        }
+
+        .max {
+            width: max(10%, 200px);
+            /* 2 değer arasında en büyüğünü seçer */
+            height: var(--height);
+            background-color: var(--primary-color)
+        }
+
+        .min {
+            width: min(10%, 200px);
+            /* 2 değer arasında en küçüğünü seçer */
+            height: var(--height);
+            background-color: var(--primary-color)
+        }
+
+        .rgba {
+            height: 50px;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Functions</h1>
+    <h2>calc(unit)</h2>
+    <div class="calc"></div>
+    <h2>max(value1, value2)</h2>
+    <div class="max"></div>
+    <h2>min(value1, value2)</h2>
+    <div class="min"></div>
+    <h2>rgba</h2>
+    <div class="rgba"></div>
+</body>
+
+</html>

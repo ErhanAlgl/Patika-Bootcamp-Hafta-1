@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        .position {
+            border: 2px solid peru;
+        }
+
+        .position.relative {
+            position: relative;
+        }
+
+        .position.absolute {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .position.sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            border-color: blueviolet;
+        }
+        .position.fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Position</h1>
+    <hr />
+    <h2>Position: static</h2>
+    <div class="position">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, debitis dolores fuga dignissimos laboriosam
+            eveniet sed vitae aperiam possimus, ex dolore illum inventore vel dolor qui. Enim odio non molestias.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis expedita unde earum eveniet fugit praesentium culpa reprehenderit minima, itaque ipsum temporibus voluptatibus iusto dolores cumque soluta facilis tempore provident repellat odio neque! Harum, nisi corporis? Non id debitis optio aliquam rem totam ipsum nemo iste dolorem delectus facere minus modi nostrum, odit magni! Omnis nesciunt quisquam ab sed reprehenderit incidunt fuga nostrum magni quaerat minima expedita iusto, nam tenetur quibusdam delectus mollitia. Cum pariatur enim facilis accusamus doloribus id harum rerum nemo quibusdam ducimus fugiat, nam accusantium laudantium at dolor quae exercitationem repudiandae ut provident! Cumque sint, quaerat quasi eum rerum inventore blanditiis libero eaque laudantium, sapiente aliquid! Excepturi officia sequi necessitatibus voluptatem similique accusamus vero inventore iure, delectus, magni nostrum. Quia unde totam similique praesentium illum autem qui cum molestiae itaque sit adipisci quam dolores exercitationem dolor, fugit eos recusandae quibusdam tenetur consequatur perferendis nemo repudiandae perspiciatis animi. Quos animi ut aliquid. Ab provident dignissimos veritatis consequatur. Nulla consequuntur similique sequi facilis! Repellat reiciendis alias sed sapiente reprehenderit voluptas ab harum consequatur doloribus numquam ullam illo, voluptatibus, ipsum porro dolores possimus itaque quisquam nisi fugiat molestias recusandae hic minus. Aspernatur delectus aliquam est, officia sequi natus eius sed mollitia illum earum quasi nihil! Delectus omnis molestiae dolores inventore ea deleniti aliquid mollitia, corporis laboriosam perspiciatis vitae, perferendis, veritatis sequi amet quisquam eligendi autem quas! Eius sit, vero assumenda molestiae, ab reiciendis vitae amet tempore nostrum sint officiis quo facilis provident obcaecati, consequatur error! Aliquid vel, beatae dolore voluptate sit aperiam iusto officiis obcaecati necessitatibus nisi cum consectetur natus amet rerum voluptates blanditiis, modi aspernatur! Sint beatae consectetur aperiam nihil necessitatibus voluptas doloremque mollitia. Labore fugit quo facilis eligendi libero magni autem sapiente nesciunt, a tempore non quas porro? Esse, commodi? Autem distinctio soluta ducimus esse, dolorem quod, reprehenderit odit voluptates accusamus sit ea minima totam magni cumque ipsa corporis. Repellendus voluptatem vitae tempore. Magnam, placeat esse quaerat iste molestias dolore dignissimos perspiciatis non obcaecati iusto explicabo et nostrum illo exercitationem, reprehenderit minima tenetur possimus quis voluptate consectetur ratione impedit adipisci eaque. Perspiciatis, perferendis. Hic expedita exercitationem eius minima saepe architecto, alias vero. Inventore, delectus incidunt obcaecati dolorum iusto quaerat perferendis suscipit optio rem laborum vel blanditiis temporibus, nostrum possimus. Similique reiciendis doloremque ratione asperiores quod quaerat ea ipsa voluptates nihil suscipit possimus a animi deleniti, sed aperiam, molestias, dolore tempora est quasi dolorum sapiente et. Itaque eligendi amet esse beatae? Blanditiis quis magni necessitatibus nisi! Fugiat laudantium ea sed distinctio hic atque praesentium sunt incidunt! Necessitatibus perferendis consequuntur laborum molestias iure. Quae dolore ipsum amet saepe sint cum sapiente odio. Hic fuga voluptatum atque illo quod nobis, voluptas quibusdam facere amet? Excepturi ducimus, aliquam consequatur, quos commodi eligendi quo autem ut sequi nesciunt laborum placeat voluptatibus delectus mollitia, et esse. Deleniti perferendis neque magnam temporibus sequi quae sunt recusandae repellat unde reprehenderit, ducimus, pariatur reiciendis dolorem libero voluptatibus maxime assumenda illo! Dolore odio libero minima deleniti alias voluptas incidunt nihil eos? Sed cumque esse, doloremque molestiae accusantium qui totam?</p>
+    </div>
+    <h2>Position: relative</h2>
+    <div class="position relative">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, debitis dolores fuga dignissimos laboriosam
+            eveniet sed vitae aperiam possimus, ex dolore illum inventore vel dolor qui. Enim odio non molestias.</p>
+    </div>
+    <h2>Position: absolute</h2>
+    <div class="position relative">
+        <div class="position absolute">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ab blanditiis nulla mollitia
+                corrupti aspernatur quaerat id? Facilis quas alias minus excepturi maiores, veritatis quam impedit quis
+                dicta natus incidunt.</p>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <h2>Position: sticky</h2>
+    <div class="position sticky">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, debitis dolores fuga dignissimos laboriosam
+            eveniet sed vitae aperiam possimus, ex dolore illum inventore vel dolor qui. Enim odio non molestias.</p>
+    </div>
+    <h2>Position: fixed</h2>
+    <div class="position fixed">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, debitis dolores fuga dignissimos laboriosam
+            eveniet sed vitae aperiam possimus, ex dolore illum inventore vel dolor qui. Enim odio non molestias.</p>
+    </div>
+    <div style="height: 200vh;"></div>
+</body>
+
+</html>

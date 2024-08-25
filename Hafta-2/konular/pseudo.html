@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo</title>
+    <style>
+        a:hover {
+            color: violet;
+        }
+
+        a:active {
+            color: coral;
+        }
+
+        input:disabled {
+            background-color: lightgray;
+        }
+
+        input:not(.name) {
+            background-color: firebrick;
+            /* name classı dışındaki inputlara background ver */
+        }
+
+        li:nth-child(2n) {
+            background-color: antiquewhite;
+        }
+        .c1::first-line{
+            color: darkorange;
+        }
+        .c2::before, .c2::after{
+            content: "";
+            background-color: cornflowerblue;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .c2::before{
+            margin-right: 5px;
+        }
+        .c2::after{
+            margin-left: 5px;
+        }
+        ::selection{
+            color: white;
+            background-color: mediumpurple;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Pseudo</h1>
+    <h2>CSS Pseudo-class</h2>
+    <h3>:active</h3>
+    <p><a href="#">Bağlantıya tıkla</a></p>
+    <h3>:hover</h3>
+    <p><a href="#">Bağlantının üzerine gel</a></p>
+    <h3>:disabled</h3>
+    <input type="text" disabled>
+    <h3>:not</h3>
+    <input type="text" class="name">
+    <h3>:nth-child(n)</h3>
+    <ul>
+        <li>İstanbul</li>
+        <li>İzmir</li>
+        <li>Ankara</li>
+        <li>Trabzon</li>
+        <li>Antalya</li>
+        <li>Adana</li>
+    </ul>
+    <h2>CSS Pseudo-elements</h2>
+    <h3>::first-line</h3>
+    <p class="c1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quod ratione ea voluptatum debitis reiciendis reprehenderit, alias ex cumque adipisci recusandae iusto repellendus aliquid, rerum eligendi dicta. Numquam, necessitatibus aliquam?</p>
+    <h3>::before, ::after</h3>
+    <p class="c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius id libero culpa, quos doloremque quasi ut vitae est itaque cum, ullam odit ratione! A autem adipisci provident! Numquam, blanditiis!</p>
+    <h3>::selection</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, corporis, porro officia fugit quaerat eveniet molestiae laborum labore pariatur esse rerum sunt animi consequatur? Tenetur possimus aspernatur eligendi officia natus.</p>
+</body>
+
+</html>

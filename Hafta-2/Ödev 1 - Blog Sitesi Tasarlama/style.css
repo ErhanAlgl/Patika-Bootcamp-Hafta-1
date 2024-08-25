@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1;
+}
+
+article p {
+  color: #666;
+}
+
+article h3 {
+  color: #333;
+}
+
+#header {
+  position: relative;
+  background-color: #333333;
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+}
+
+#nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 12px 0;
+}
+
+#nav .nav-items {
+  color: white;
+  padding: 8px 24px;
+  text-decoration: none;
+}
+
+#nav .nav-items:hover {
+  text-decoration: line-through;
+  background-color: white;
+  color: #333333;
+}
+
+.section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  text-align: left;
+}
+
+.container-blog {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.blog {
+  max-width: 40%;
+  border-radius: 8px;
+  background-color: white;
+  padding: 32px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2); /* Gölge */
+}
+
+.blog img {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 1.2rem;
+}
+
+.blog a {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.blog p {
+  font-size: 14px;
+  padding: 12px 0px;
+  color: #666;
+  text-align: left;
+}
+
+.blog h3 {
+  padding: 2px 0px;
+  color: #333;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.post {
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2); /* Gölge */
+}
+
+.post p {
+  font-size: 14px;
+  padding: 12px 0px;
+  color: #666;
+  text-align: center;
+}
+
+.post h3 {
+  padding: 2px 0px;
+  color: #333;
+}
