@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Ödev - Kayıt Formu</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 id="title">Survey Form For CSS Practice</h1>
+            <p id="description">Patika+ CSS Form Project</p>
+            <form id="survey-form">
+                <fieldset>
+
+                    <div>
+                        <label for="name" id="name-label">
+                            <span class="material-symbols-outlined">person</span>Fullname
+                        </label>
+                        <input type="text" id="name" placeholder="Fullname" required>
+                    </div>
+
+                    <div>
+                        <label for="email" id="email-label">
+                            <span class="material-symbols-outlined">email</span>Email
+                        </label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div>
+                        <label for="number" id="number-label">
+                            <span class="material-symbols-outlined">cake</span>Age
+                        </label>
+                        <input type="number" id="number" placeholder="Enter your age" min="18" max="99" required>
+                    </div>
+
+                    <div>
+                        <label for="dropdown" id="dropdown-label"> 
+                            <span class="material-symbols-outlined">wc</span>Gender
+                        </label>
+                        <select name="gender" id="dropdown">
+                            <option selected disabled>Select Genter</option>
+                            <option value="male">Male</option>
+                            <option value="female Genter">Female</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="survey">Where did you here us?</label>
+                        <input type="radio" id="instagram" name="survey" value="instagram">Instagram
+                        <br />
+                        <input type="radio" id="linkedIn" name="survey" value="linkedIn">LinkedIn
+                    </div>
+
+                    <div>
+                        <label id="terms" for="terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            Terms Of Service
+                            <input type="checkbox" id="news" name="news" required>
+                            Subscribe For News
+                        </label>
+                    </div>
+
+                    <div>
+                        <label for="message" id="message-label">Your Message</label>
+                        <textarea id="message" placeholder="Enter your message" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

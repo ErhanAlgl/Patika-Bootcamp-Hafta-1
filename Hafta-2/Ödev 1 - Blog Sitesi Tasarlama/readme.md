@@ -41,4 +41,6 @@ Ana Sayfa:
 ![ScreenShot](./assets/CSS-Ödev-1.png)
 
 Blog Gönderisi Sayfası:
-![Video](./assets/CSS-Ödev-1.mp4)
+![Video]
+
+https://github.com/user-attachments/assets/673d7c7a-1af6-43d3-a156-5850e6469440
