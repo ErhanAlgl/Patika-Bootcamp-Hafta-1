@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace; /* Siber/Yazılım temasına uygun font */
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #32a852;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    height: 100vh; /* Her section ekran boyutu kadar yer kaplayacak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #32a852;
+}
+
+.section p, .section ul {
+    font-size: 1.2em;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+#about {
+    background: url('./assets/harold-finch.jpg') no-repeat center center/cover;
+}
+
+#quotes {
+    background: url('./assets/Ekran\ Resmi\ 2024-08-27\ 16.24.05.png') no-repeat center/cover;
+}
+
+#poi {
+    background: url('./assets/Ekran\ Resmi\ 2024-08-27\ 16.24.14.png') no-repeat center/cover;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0d0d0d;
+    color: #32a852;
+    font-size: 0.9em;
+}
