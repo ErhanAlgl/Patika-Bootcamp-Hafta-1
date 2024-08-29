@@ -23,7 +23,7 @@ This project is a simple blog website designed using the Bootstrap 4 framework. 
 ## Technologies Used
 
 - **HTML5**: For the website's structure.
-- ***Bootstrap 4.6***: To create a responsive and modern layout quickly.
+- **Bootstrap 4.6**: To create a responsive and modern layout quickly.
   
 ## Screenshot
   ![HomePage](./assets/ss.png)
