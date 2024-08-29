@@ -1,0 +1,33 @@
+.nav {
+    background-color: blueviolet;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: antiquewhite;
+}
+
+.nav-link:hover {
+    color: aliveblue;
+    font-size: 20px;
+    transition: font-size 1s;
+    animation: pulse 2s infinite;
+}
+
+/* PULSE ANİMASYONU SONSUZ DÖNGÜ */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
