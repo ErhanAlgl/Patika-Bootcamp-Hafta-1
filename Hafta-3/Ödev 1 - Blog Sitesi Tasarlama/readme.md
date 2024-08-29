@@ -26,4 +26,5 @@ This project is a simple blog website designed using the Bootstrap 4 framework. 
 - ***Bootstrap 4.6***: To create a responsive and modern layout quickly.
   
 ## Screenshot
+
 ![Screenshot](./assets/ss.png)
