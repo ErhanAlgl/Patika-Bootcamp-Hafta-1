@@ -34,5 +34,5 @@ This project is a simple web clone of Instagram, focusing on the layout and UI d
 
 ## Video
 
-![Instagram Clone Video](./assets/video-instagram.mp4)
+https://github.com/user-attachments/assets/ec24893d-9255-44ee-9425-23127d57b1bc
 
