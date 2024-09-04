@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS Review Page</title>
+    <link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500">
+    <!-- Tailwind CSS 1 (htmlpreview.github.io'da düzgün çalışsın diye ekledim.) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS 2 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-200">
+    <!-- Navbar START -->
+    <nav class="sticky top-0 p-4 bg-white z-50">
+        <div class="container flex justify-between mx-auto">
+            <ul class="items-stretch hidden space-x-3 lg:flex">
+                <li class="flex">
+                    <a href="#" class="flex items-center px-4 border-b-2 border-purple-700 text-purple-700">Home</a>
+                </li>
+                <li class="flex">
+                    <a href="#"
+                        class="flex items-center px-4 border-b-2 hover:border-purple-700 hover:text-purple-700">About</a>
+                </li>
+                <li class="flex">
+                    <a href="#"
+                        class="flex items-center px-4 border-b-2 hover:border-purple-700 hover:text-purple-700">Contact</a>
+                </li>
+            </ul>
+            <a href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company">
+            </a>
+            <div class="flex items-center md:space-x-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </span>
+                    <input type="search" name="Search" placeholder="Search..."
+                        class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none focus:bg-gray-50">
+                </div>
+                <button type="button"
+                    class="hidden px-6 py-2 font-semibold rounded lg:block bg-purple-700 text-white rounded-md">Log
+                    in</button>
+            </div>
+            <button title="Open menu" type="button" class="p-4 lg:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Navbar END -->
+
+    <!-- Hero/Main START -->
+    <section>
+        <div
+            class="container mx-auto px-4 py-16 flex flex-col items-center text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
+            <h1 class="text-5xl font-bold sm:text-6xl-">Patika+ Bootcamp <span class="text-purple-700">Tailwind
+                    CSS</span> Review Page Project</h1>
+            <p class="mt-10 px-10 mb-10 text-lg font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Amet repellendus a autem harum, nemo incidunt!</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 px-5 py-3 rounded bg-purple-700 hover:bg-purple-800 text-white font-semibold">Get
+                    started</button>
+                <button class="px-5 py-3 rounded hover:bg-purple-700 hover:text-white">Learn more</button>
+            </div>
+        </div>
+    </section>
+    <!-- Hero/Main END -->
+
+    <!-- Testimonial START -->
+    <section class="bg-gray-50">
+        <div class="container mx-auto flex flex-col items-center md:px-10 md:my-8">
+            <h2 class="text-4xl font-semibold text-center mt-12 mb-10">What our customers are saying about us</h2>
+        </div>
+        <div
+            class="container mx-auto flex flex-col items-center justify-center lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
+            <div class="flex flex-col mx-4 my-6 max-w-sm shadow-lg">
+                <div class="flex flex-col px-4 py-12 rounded-t-md sm:px-8 md:px-12 bg-white">
+                    <i class="fa-solid fa-quote-left text-4xl text-purple-700"></i>
+                    <p class="italic text-center text-lg"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veniam assumenda tenetur
+                        eveniet
+                        blanditiis, magni porro?</p>
+                    <i class="fa-solid fa-quote-right text-4xl text-purple-700 text-right"></i>
+                </div>
+                <div class="flex flex-col py-8 rounded-b-md sm:px-8 md:px-12 bg-purple-700 items-center">
+                    <img class="rounded-full w-16 h-16 mb-2 -mt-16" src="https://picsum.photos/id/48/1080/1080" alt="">
+                    <p class="text-white font-bold text-lg">Erhan Algül</p>
+                    <p class="text-white font-light text-sm">Frontend Developer</p>
+                </div>
+            </div>
+            <div class="flex flex-col mx-4 my-6 max-w-sm shadow-lg">
+                <div class="flex flex-col px-4 py-12 rounded-t-md sm:px-8 md:px-12 bg-white">
+                    <i class="fa-solid fa-quote-left text-4xl text-purple-700"></i>
+                    <p class="italic text-center text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Ipsam dolor culpa tenetur debitis fugiat deserunt?</p>
+                    <i class="fa-solid fa-quote-right text-4xl text-purple-700 text-right"></i>
+                </div>
+                <div class="flex flex-col py-8 rounded-b-md sm:px-8 md:px-12 bg-purple-700 items-center">
+                    <img class="rounded-full w-16 h-16 mb-2 -mt-16" src="https://picsum.photos/id/92/1080/1080" alt="">
+                    <p class="text-white font-bold text-lg">Salih Derviş</p>
+                    <p class="text-white font-light text-sm">Frontend Developer</p>
+                </div>
+            </div>
+            <div class="flex flex-col mx-4 my-6 max-w-sm shadow-lg">
+                <div class="flex flex-col px-4 py-12 rounded-t-md sm:px-8 md:px-12 bg-white">
+                    <i class="fa-solid fa-quote-left text-4xl text-purple-700"></i>
+                    <p class="italic text-center text-lg"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Officia fuga pariatur optio obcaecati eos beatae!</p>
+                    <i class="fa-solid fa-quote-right text-4xl text-purple-700 text-right"></i>
+                </div>
+                <div class="flex flex-col py-8 rounded-b-md sm:px-8 md:px-12 bg-purple-700 items-center">
+                    <img class="rounded-full w-16 h-16 mb-2 -mt-16" src="https://picsum.photos/id/84/1080/1080" alt="">
+                    <p class="text-white font-bold text-lg">Hüma Nuriler</p>
+                    <p class="text-white font-light text-sm">Frontend Developer</p>
+                </div>
+            </div>
+            <div class="flex flex-col mx-4 my-6 max-w-sm shadow-lg">
+                <div class="flex flex-col px-4 py-12 rounded-t-md sm:px-8 md:px-12 bg-white">
+                    <i class="fa-solid fa-quote-left text-4xl text-purple-700"></i>
+                    <p class="italic text-center text-lg"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Cupiditate eum repudiandae esse quam fugiat!</p>
+                    <i class="fa-solid fa-quote-right text-4xl text-purple-700 text-right"></i>
+                </div>
+                <div class="flex flex-col py-8 rounded-b-md sm:px-8 md:px-12 bg-purple-700 items-center">
+                    <img class="rounded-full w-16 h-16 mb-2 -mt-16" src="https://picsum.photos/id/74/1080/1080" alt="">
+                    <p class="text-white font-bold text-lg">Mazhar Allawi</p>
+                    <p class="text-white font-light text-sm">Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial START -->
+
+    <!-- Form START -->
+    <section class="p-6 mt-8 mb-8">
+        <form class="conteiner w-full max-w-xl p-8 mx-auto space-y-6 rounded-md bg-white">
+            <h2 class="w-full text-3xl font-bold">Contact us</h2>
+            <div>
+                <label class="block mb-2 ml-1" for="">Name</label>
+                <input class="block w-full bg-gray-100 rounded-md pl-3 py-2 focus:outline-none focus:ring" type="text"
+                    placeholder="Your name">
+            </div>
+            <div>
+                <label class="block mb-2 ml-1" for="">Email</label>
+                <input class="block w-full bg-gray-100 rounded-md pl-3 py-2 focus:outline-none focus:ring" type="email"
+                    placeholder="Your email">
+            </div>
+            <div>
+                <label class="block mb-2 ml-1" for="">Message</label>
+                <textarea class="block w-full bg-gray-100 rounded-md pl-3 py-2 focus:outline-none focus:ring"
+                    type="text" placeholder="Message..."></textarea>
+            </div>
+            <div>
+                <button
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 bg-purple-700 hover:bg-purple-800 text-white text-lg font-semibold w-full rounded p-2">Send</button>
+            </div>
+        </form>
+    </section>
+    <!-- Form END -->
+
+    <!-- Footer START -->
+    <footer>
+        <div class="container flex flex-col mx-auto p-8 lg:flex-row">
+            <ul
+                class="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
+                <li>Shop</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Pricing</li>
+                <li>Contact</li>
+            </ul>
+            <div class="flex flex-col justify-center space-x-4">
+                <div class="flex justify-center space-x-3">
+                    <a href="https://github.com/ErhanAlgl"><i
+                            class="fa-brands fa-github text-white bg-purple-700 rounded-full p-2"></i></a>
+                    <a href="https://www.linkedin.com/in/erhan-algul/"><i
+                            class="fa-brands fa-linkedin text-white bg-purple-700 rounded-full p-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram text-white bg-purple-700 rounded-full p-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter text-white bg-purple-700 rounded-full p-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest text-white bg-purple-700 rounded-full p-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-google text-white bg-purple-700 rounded-full p-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer END -->
+
+</body>
+
+</html>
