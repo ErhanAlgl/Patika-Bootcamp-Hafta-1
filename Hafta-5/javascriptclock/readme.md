@@ -1,8 +1,5 @@
-## Proje Video
-<video width="640" height="360" controls>
-  <source src="./assets/javascriptclock.mp4" type="video/mp4">
-</video>
-
+## Proje Ekran Görüntüsü
+![Gif](./assets/javascriptclock.gif)
 
 # Patika+ Javascript Saat Ödevi
 
