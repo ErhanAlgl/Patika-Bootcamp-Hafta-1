@@ -10,7 +10,7 @@ function showTime() {
     
     // Gün ve saat bilgisini Türkçe formatında alıyoruz
     let day = now.toLocaleDateString('tr-TR', { weekday: "long" });
-    let time = now.toLocaleTimeString('tr-TR'); // Saat, dakika ve saniyeyi Türkçe formatında alıyoruz
+    let time = now.toLocaleTimeString('tr-TR'); // Saat, dakika ve saniyeyi 24 saatlik formatında alıyoruz. En olsa AM ve PM gösterimleri olmaktaymışş.
 
     // Saati ve günü myClock içine yazdırıyoruz
     clockElement.innerHTML = `${time} ${day}`;
@@ -30,7 +30,7 @@ toggle.addEventListener('change', function () {
   // Body'ye dark class'ı ekleyip çıkarıyoruz
   document.body.classList.toggle('dark');
   
-  // Eğer toggle aktifse (dark mode on), metni ve simgeyi değiştir
+  // Eğer toggle aktifse (dark mode on), metni ve simgeyi değiştir. İconlar düzgün çalışır umarımm.
   if (toggle.checked) {
     toggleText.innerHTML = 'Dark Mode 🌚';
     document.body.classList.add('bg-gray-800', 'text-white');
@@ -42,10 +42,10 @@ toggle.addEventListener('change', function () {
   }
 });
 
-// Sayfa yüklendiğinde varsayılan olarak light mode'u başlatıyoruz
+// Sayfa yüklendiğinde varsayılan olarak light mode'u başlatıyoruz.
 document.body.classList.add('bg-gray-200', 'text-black');
 
-// İsim değiştirme fonksiyonu
+// İsim değiştirme fonksiyonu. Yenilemeden isim değiştiriyoruz.
 document.querySelector("#changeNameBtn").addEventListener("click", function() {
     let newName = prompt("Yeni isminizi girin:");
     if (newName) {
