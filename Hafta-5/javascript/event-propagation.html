@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Propagation</title>
+    <style>
+        div {
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        #div1,
+        #div6 {
+            background-color: #999;
+        }
+
+        #div2,
+        #div5 {
+            background-color: #777;
+        }
+
+        #div3,
+        #div4 {
+            background-color: #555;
+        }
+        #changeColor{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Event Propagation</h1>
+    <!-- 
+    Bubbling: hedef elemandan dış elemana kadar yayılan aşama. İçteki target elemanından dışarıya doğru ilerler.
+    Capturing: en dıştaki elemandan hedef elemana kadar yayılan aşama. Dıştaki elemandan içeriye doğru ilerler.
+    -->
+
+    <h2>Bubbling</h2>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+
+    <h2>Capturing</h2>
+    <div id="div4">
+        <div id="div5">
+            <div id="div6"></div>
+        </div>
+    </div>
+
+    <button id="changeColor">Button</button>
+    <input id="input" type="text" placeholder="Input Event">
+
+    <script>
+        var div1 = document.getElementById('div1');
+        var div2 = document.getElementById('div2');
+        var div3 = document.getElementById('div3');
+        var div4 = document.getElementById('div4');
+        var div5 = document.getElementById('div5');
+        var div6 = document.getElementById('div6');
+
+        div1.addEventListener('click', function (event) {
+            console.log('bubbling:1')
+        })
+        div2.addEventListener('click', function (event) {
+            console.log('bubbling:2')
+        })
+        div3.addEventListener('click', function (event) {
+            console.log('bubbling:3')
+            // event.stopPropagation(); // Bubbling durduruldu
+            // event.stopImmediatePropagation(); // Bubble kendi elementindeki eventleri de bypass eder
+        })
+
+        // True veya false ekleyerek capturing yapmış oluyoruz.
+
+        div4.addEventListener('click', function (event) {
+            console.log('capturing:1')
+        }, true)
+        div5.addEventListener('click', function (event) {
+            console.log('capturing:2')
+        }, true)
+        div6.addEventListener('click', function (event) {
+            console.log('capturing:3')
+        }, true)
+
+
+        // Pratik Ödev
+        var button = document.getElementById('changeColor');
+        var input = document.getElementById('input');
+
+        button.addEventListener('click', function (event) {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = randomColor
+            console.log('Button Clicked');
+        })
+
+        function handleInput(event) {
+            console.log('input', event.data);
+        }
+        input.addEventListener('input', handleInput);
+        
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+    <h1>JavaScript Data Types</h1>
+
+    <script>
+        let str = "John's";
+        console.log(typeof str, str);
+        
+        let int = 61;
+        console.log(typeof int, int);
+        
+        let bool = true;
+        console.log(typeof bool, bool);
+        
+        let bigint = BigInt('13651389778642497628349269423784862734'); /* Çok büyük değerler için */
+        console.log(typeof bigint, bigint);
+        
+        let symbol = Symbol('Erhan'); /* Değiştirilemez bir değer */
+        console.log(typeof symbol, symbol);
+
+        let x;
+        console.log(typeof x, x); /* undefined olur */
+
+        let y = null;
+        console.log(typeof y, y); /* object "null/boş" olur */
+        
+        let obj = {
+            name: "Erhan",
+            age: 27,
+            city: "Istanbul"
+        };
+        console.log(typeof obj, obj); /* object*/
+
+        /* Immutable - değiştirilemez. */
+        let name = 'Erhan';
+        let clonename = name;
+        clonename = 'Algul';
+        console.log('immutable', name, clonename)
+
+        //Mutable 
+        let user = {
+            name: 'Erhan',
+        };
+        let cloneUser = user;
+        cloneUser.name = 'Algul';
+        console.log('mutable', user, cloneUser);
+
+        let arr = ["Apple", "Banana", "Cherry"];
+        console.log(typeof arr, arr); /* object "Array" olarak algılanır */
+        
+        let func = function() {
+            console.log("Hello, World!");
+        };
+        console.log(typeof func, func); /* function */
+    </script>
+    
+</body>
+</html> 

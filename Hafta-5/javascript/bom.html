@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript BOM</title>
+</head>
+
+<body>
+    <h1>JavaScript BOM</h1>
+    <!-- JavaScript'in tarayıcı ile konuşmasını sağlar. Window tüm global JS nesnelerini, fonksiyonlarını ve değişkenlerini window objesi altındadır/üyesidir.  -->
+
+    <script>
+        console.log(window)
+
+        console.groupCollapsed('Window Screen');
+        console.log(window.screen);
+        console.log('screen.width', screen.width);
+        console.log('screen.height', screen.height);
+        console.groupEnd();
+
+        console.groupCollapsed('Window Locaiton');
+        console.log(location);
+        console.log('location.origin', location.origin);
+        console.log('location.pathname', location.pathname);
+        console.log('location.href', location.href);
+        // console.log('location.href', location.href="http://www.patika.dev");
+        console.groupEnd();
+
+        console.groupCollapsed('Window Navigator');
+        console.log(navigator);
+        console.log('navigator.userAgent:', navigator.userAgent)
+        console.log('navigator.language:', navigator.language)
+        console.log('navigator.vendor:', navigator.vendor)
+        console.groupEnd();
+
+        // JavaScript Timing Events
+        setTimeout(() => {
+            console.log('setTimeout:')
+        }, 1000);
+
+        var count = 0;
+        var interval = setInterval(function () {
+            if (count === 5) {
+                clearInterval(interval);
+            } else {
+                count++;
+                console.log('Interval:', count);
+            }
+        }, 1000,)
+    </script>
+
+</body>
+
+</html>

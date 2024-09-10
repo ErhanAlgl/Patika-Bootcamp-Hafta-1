@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+</head>
+
+<body>
+    <h1>JavaScript Variables</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Scope</th>
+                <th>Redeclare</th>
+                <th>Reassign</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>var</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>let</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>const</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        /* DECLARING VARIABLES */
+        var x = 1;
+        let y = 2;
+        const z = 3;
+        console.log(x, y, z);
+        /* REDECLARE VARIABLES */
+        var x = -1;
+        console.log('redevlared x', x);
+        /* REASSIGN VARIABLES */
+        x = 10;
+        y = 20;
+        console.log('reassigned x,y', x, y);
+
+        const user = {
+            name: 'John',
+            age: 30,
+        };
+        user.name = 'Jane';
+        console.log('reassigned user', user);
+
+        /* VARIABLE SCOPE */
+        { // Block Scope
+            let blockY = 2;
+            const blockZ = 3;
+            console.log('blcok scope, blockY, blockZ', blockY, blockZ);
+        }
+
+        { // Global Scope
+            var gloabalX = 1;
+        }
+        console.log('global x', gloabalX);
+
+        
+        function example() { // function Scope
+            var x = 4;
+            let y = 5;
+            const z = 6;
+            console.log('function scope, x, y, z', x, y, z);
+        }
+        example();
+
+    </script>
+</body>
+
+</html>

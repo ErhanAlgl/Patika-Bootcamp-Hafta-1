@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Stataments</title>
+</head>
+
+<body>
+    <h1>JavaScript Conditional Stataments</h1>
+    <script>
+        /* Comparison Operators */
+        const age = 18;
+        console.group('Comparison Operators');
+        console.log(age > 17 ? 'Değer büyüktür.' : 'Değer büyük değildir.');
+        console.log(age < 17 ? 'Değer küçüktür.' : 'Değer küçük değildir.');
+        console.log(age == 17 ? 'Değer eşittir.' : 'Değer eşit değildir.')
+        console.log(age === '17' ? 'Değer ve tür eşittir.' : 'Değer ve tür eşit değildir.')
+        console.groupEnd();
+
+        /* Logical Operators */
+        const visa = true;
+        const permission = false;
+
+        console.group('Logical Operators');
+        if (visa) {
+            if (age >= 18 || permission) {
+                console.log("Türkiye'ye hoş geldiniz.");
+            } else {
+                console.log('Ebeveyn izni olmadan Türkiye\'ye giriş yapamazsınız.');
+            }
+        } else {
+            console.log('Giriş izni verilmedi.')
+        }
+        
+        if (visa && age >= 18 || visa && permission) {
+            console.log("Türkiye'ye hoş geldiniz.");
+        } else if (visa && age <= 18 || visa && !permission) {
+            console.log('Ebeveyn izni olmadan Türkiye\'ye giriş yapamazsınız.');
+        } else {
+            console.log('Giriş izni verilmedi.');
+        }
+
+        console.groupEnd();
+
+        /* If Statements */
+        const score = 85;
+        console.group('If Statements');
+
+        if(score >= 90) {
+            console.log('Derece: A');
+        } else if (score >= 80) {
+            console.log('Derece: B');
+        } else if (score >= 70) {
+            console.log('Derece: C');
+        } else if (score >= 60) {
+            console.log('Derece: D');
+        } else if (score >= 50) {
+            console.log('Derece: E');
+        } else {
+            console.log('Derece: F');
+        }
+        
+        console.groupEnd();
+
+        /* Switch Statements */
+
+        const day = 5;
+        console.group('Switch Statements');
+
+        switch (day) {
+            case 1:
+                console.log('Pazartesi')
+                break;
+            case 2:
+                console.log('Salı')
+                break;
+            case 3:
+                console.log('Çarşamba')
+                break;
+            case 4:
+                console.log('Perşembe')
+                break;
+            case 5:
+                console.log('Cuma')
+                break;
+            case 6:
+                console.log('Cumartesi')
+                break;
+            case 7:
+                console.log('Pazar')
+                break;
+            default:
+            console.log('Geçersiz gün')
+                break;
+        }
+
+        switch(day) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                console.log('Hafta içi.');
+                break;
+            case 6:
+            case 7:
+                console.log('Hafta sonu.');
+                break;
+            default:
+                console.log('Geçersiz gün');
+                break;
+        }
+
+        console.groupEnd();
+
+        const color = 'red';
+
+        if(color === 'red') {
+            console.log('dur');
+        } else if (color === 'green') {
+            console.log('Geç');
+        } else if (color === 'yellow') {
+            console.log('Dikkat Et');
+        } else {
+            console.log('tanımsız')
+        }
+
+        switch(color) {
+            case'red':
+                console.log('dur');
+                break;
+            case 'green':
+                console.log('Geç');
+                break;
+            case 'yellow':
+                console.log('Dikkat Et');
+                break;
+            default:
+                console.log('tanımsız')
+                break;
+        }
+
+
+        // console.log(true && true); // true
+        // console.log(true && false); // false
+        // console.log(true || false); // true
+        // console.log(false || false); // false
+        // console.log(!true); // false
+
+
+
+    </script>
+</body>
+
+</html>

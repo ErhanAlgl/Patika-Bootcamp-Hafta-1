@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Functions</title>
+</head>
+<body>
+    <h1>Javascript Functions</h1>
+    <script>
+        function vat(price, rate = 20) {
+
+            if (typeof price !== 'number') {
+                throw 'Lütfen bir sayı girin.';
+            } else if (price <= 0) {
+                throw 'Lütfen pozitif sayı girin.';
+            }
+
+            const tax = price / 100 * rate;
+            const amount = price + tax;
+
+            return amount;
+        }
+        const price = 100;
+        const amount = vat(price);
+        const phone = vat(price, 100);
+        
+        console.log('Price', price)
+        console.log('Tax', amount-price)
+        console.log('Amount', amount)
+        console.log('Phone', phone)
+
+        function add(a,b) {
+            return a + b;
+        }
+        console.log(add(2,3));
+
+        let multiply = function(a,b) {
+            return a * b;
+        }
+        console.log(multiply(2,3));
+        
+        let subtraction = function(a,b) {
+            return a - b;
+        }
+        console.log(subtraction(2,3));
+        
+        let division = function(a,b) {
+            return a / b;
+        }
+        console.log(division(9,3));
+
+    </script>
+</body>
+</html>

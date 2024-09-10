@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+    <style>
+        body.custom-class1 {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript DOM</h1>
+    <!-- HTML elementlerine müdahale etmemizi sağlayan JS objesi. Herhangi bir HTML elementini seçmemizi, gerek yapı gerek stillerinde değişiklik yapmamıza veya yeni bir element oluşturmamıza veya silmemize yarayan bir yapı.  -->
+    <ul>
+        <li class="course" id="html">HTML</li>
+        <li class="course" id="css">CSS</li>
+        <li class="course" id="tailwind">Tailwind CSS</li>
+        <li class="course" id="javascript">JS</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid esse voluptatem rem consequuntur
+        animi repellat! Provident debitis a esse impedit harum blanditiis quos sunt omnis fugit expedita, cum
+        perferendis.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, provident! Iste illo, soluta quaerat cupiditate
+        ab adipisci doloremque omnis reprehenderit ratione accusamus dolorem nostrum dolorum sapiente officia
+        consequatur iure culpa.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, provident! Iste illo, soluta quaerat cupiditate
+        ab adipisci doloremque omnis reprehenderit ratione accusamus dolorem nostrum dolorum sapiente officia
+        consequatur iure culpa.</p>
+    <script>
+        console.log(document);
+        console.log(document.documentElement);
+        console.log(document.head);
+        console.log(document.body);
+
+        var body = document.body;
+
+        body.setAttribute('id', 'custom-id')
+        body.dataset.uuid = '#123';
+        // body.setAttribute('data-uuid', '#123')
+        body.classList.add('custom-class', 'custom-class2');
+
+        setTimeout(() => {
+            body.classList.add('custom-class1')
+        }, 1000);
+
+        var elementById = document.getElementById('html');
+        elementById.style.backgroundColor = 'yellow';
+
+        console.groupCollapsed('getElementById()')
+        console.log(elementById);
+        console.dir(elementById);
+        console.groupEnd();
+
+        var elementByClassName = document.getElementsByClassName('course');
+        console.groupCollapsed('getElementsByClassName()')
+        console.log(elementByClassName);
+        console.groupEnd();
+
+        var elementByTagName = document.getElementsByTagName('p');
+        console.groupCollapsed('getElementsByTagName()')
+        console.log(elementByTagName);
+        console.groupEnd();
+
+        var querySelector = document.querySelector('.course');
+        console.groupCollapsed('querySelector()')
+        console.log(querySelector);
+        console.groupEnd();
+
+        var querySelectorAll = document.querySelectorAll('ul >.course');
+        console.group('querySelectorAll()')
+        console.log(querySelectorAll);
+        console.groupEnd();
+
+
+    </script>
+</body>
+
+</html>

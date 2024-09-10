@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS 1 (htmlpreview.github.io'da düzgün çalışsın diye ekledim.) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS 2 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  <title>Patika+ Javascript Saat Ödevi</title>
+</head>
+
+<body class="bg-white text-black transition-colors duration-500">
+  <div class="flex justify-between p-4">
+    <div class="mb-4">
+      <button id="changeNameBtn" class="bg-blue-600 text-white p-1 rounded">İsmi Değiştir</button>
+    </div>
+    <!-- Dark Mode Toggle -->
+    <label class="inline-flex items-center cursor-pointer mb-4">
+      <input id="darkModeToggle" type="checkbox" value="" class="sr-only peer">
+      <div
+        class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      <span id="toggleText" class="ms-3 text-sm font-medium">Light Mode 🌞</span>
+    </label>
+  </div>
+
+
+  <div class="text-center">
+    <img src="https://cdn.prod.website-files.com/6097e0eca1e87557da031fef/65ddd0b63551335908fb216e_patika%20logo.png"
+      alt="Patika Logo" class="rounded mx-auto my-4" />
+    <div class="text-5xl font-bold">
+      Merhaba, <strong><span id="myName"></span></strong>! Hoş geldin!
+    </div>
+    <div id="myClock" class="text-4xl my-4"></div>
+    <div class="text-2xl">
+      tarihinde
+      <strong>Patika+ Frontend Web Development Bootcamp</strong>'in
+      Javascript bölümü 1. Ödevindesiniz.
+    </div>
+  </div>
+
+  <script src="./js/clock.js"></script>
+</body>
+
+</html>

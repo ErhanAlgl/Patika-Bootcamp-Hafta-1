@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+
+<body>
+    <h1>JavaScript Objects</h1>
+    <script>
+        const user = { // user objesi oluşturduk. "{}" ile oluşturulur. 
+            name: 'Erhan',
+            surname: 'Algul',
+            age: 27,
+            job: 'Software Developer',
+            hobbies: ['Airsoft', 'Coding'],
+            city: 'Istanbul',
+            admin: false,
+            fullname: function () {
+                return this.name + ' ' + this.surname;
+            }
+        }
+
+        user.country = 'Turkiye';
+        // delete user.country;
+
+        Object.assign(user, {
+            school: 'Marmara University',
+        })
+
+        console.dir(user); // Objeyi propertyleri ve methodları ile görmek için dir kullanılır.
+        console.log('Object.keys()', Object.keys(user)); // Objenin keylerini göster
+        console.log('Object.value()', Object.values(user)); // Objenin valuelerini göster
+        console.log('Object.entries()', Object.entries(user)); // Objenin keys ve valuelerini gruplandurarak gösterir
+        console.log(user.name);
+        console.log('user.fullname()', user.fullname());
+    </script>
+</body>
+
+</html>

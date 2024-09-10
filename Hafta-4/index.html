@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Rehber</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Arama Kutusu -->
+    <div class="max-w-xl mx-auto my-8">
+        <input type="text" id="searchInput" placeholder="Kişi Ara"
+            class="w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <!-- Kişiler Listesi -->
+    <div class="max-w-xl mx-auto bg-white rounded-lg shadow">
+        <ul id="contactList" class="divide-y divide-gray-300">
+            <!-- A ile Başlayanlar -->
+            <li id="A" class="p-2 bg-gray-200 font-bold">A</li>
+
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/5/50" alt="Abdullah Öz"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Abdullah Öz
+            </li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/10/50" alt="Ahmet Yılmaz"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Ahmet Yılmaz
+            </li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/15/50" alt="Aylin Demir"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Aylin Demir
+            </li>
+
+            <!-- B ile Başlayanlar -->
+            <li id="B" class="p-2 bg-gray-200 font-bold">B</li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/20/50" alt="Burak Yılmaz"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Burak Yılmaz
+            </li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/25/50" alt="Beril Kazım"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Beril Kazım
+            </li>
+
+            <!-- C ile Başlayanlar -->
+            <li id="C" class="p-2 bg-gray-200 font-bold">C</li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/30/50" alt="Canan Öz"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Canan Öz
+            </li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/35/50" alt="Can Polat"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Can Polat
+            </li>
+
+            <!-- D ile Başlayanlar -->
+            <li id="D" class="p-2 bg-gray-200 font-bold">D</li>
+            <li class="p-4 flex items-center"> <img src="https://picsum.photos/id/40/50" alt="Deniz Aslan"
+                    class="w-10 h-10 rounded-full mr-2" />
+                Deniz Aslan
+            </li>
+
+            <!-- E ile Başlayanlar -->
+            <li id="E" class="p-2 bg-gray-200 font-bold">E</li>
+            <li class="p-4">Elif Kara</li>
+
+            <!-- F ile Başlayanlar -->
+            <li id="F" class="p-2 bg-gray-200 font-bold">F</li>
+            <li class="p-4">Fatih Güneş</li>
+
+            <!-- G ile Başlayanlar -->
+            <li id="G" class="p-2 bg-gray-200 font-bold">G</li>
+            <li class="p-4">Gül Yıldız</li>
+
+            <!-- H ile Başlayanlar -->
+            <li id="H" class="p-2 bg-gray-200 font-bold">H</li>
+            <li class="p-4">Hakan Yıldırım</li>
+
+            <!-- I ile Başlayanlar -->
+            <li id="I" class="p-2 bg-gray-200 font-bold">I</li>
+            <li class="p-4">İsmail Kaya</li>
+
+            <!-- K ile Başlayanlar -->
+            <li id="K" class="p-2 bg-gray-200 font-bold">K</li>
+            <li class="p-4">Kemal Özdemir</li>
+
+            <!-- L ile Başlayanlar -->
+            <li id="L" class="p-2 bg-gray-200 font-bold">L</li>
+            <li class="p-4">Levent Aksoy</li>
+
+            <!-- M ile Başlayanlar -->
+            <li id="M" class="p-2 bg-gray-200 font-bold">M</li>
+            <li class="p-4">Mehmet Çelik</li>
+
+            <!-- N ile Başlayanlar -->
+            <li id="N" class="p-2 bg-gray-200 font-bold">N</li>
+            <li class="p-4">Nilay Özkan</li>
+
+            <!-- O ile Başlayanlar -->
+            <li id="O" class="p-2 bg-gray-200 font-bold">O</li>
+            <li class="p-4">Onur Yılmaz</li>
+
+            <!-- S ile Başlayanlar -->
+            <li id="S" class="p-2 bg-gray-200 font-bold">S</li>
+            <li class="p-4">Selin Erdem</li>
+
+            <!-- T ile Başlayanlar -->
+            <li id="T" class="p-2 bg-gray-200 font-bold">T</li>
+            <li class="p-4">Tamer Demir</li>
+
+            <!-- U ile Başlayanlar -->
+            <li id="U" class="p-2 bg-gray-200 font-bold">U</li>
+            <li class="p-4">Umut Şahin</li>
+        </ul>
+    </div>
+
+    <script>
+        // Arama fonksiyonu
+        const searchInput = document.getElementById('searchInput');
+        const contactList = document.getElementById('contactList');
+        const contacts = contactList.getElementsByTagName('li');
+
+        searchInput.addEventListener('input', function () {
+            const filter = searchInput.value.toUpperCase();
+            let lastCategory = null;
+
+            for (let i = 0; i < contacts.length; i++) {
+                const contact = contacts[i];
+                const textValue = contact.textContent || contact.innerText;
+
+                // Kategori harflerini ve kişileri kontrol et
+                if (contact.classList.contains('font-bold')) {
+                    // Harf kategorisi
+                    contact.style.display = 'none';
+                    lastCategory = contact;
+                } else {
+                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                        contact.style.display = '';
+                        if (lastCategory) {
+                            lastCategory.style.display = '';
+                            lastCategory = null;
+                        }
+                    } else {
+                        contact.style.display = 'none';
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
