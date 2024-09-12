@@ -1,4 +1,8 @@
-## Ekran Görüntüleri
+## Canlı Site
+
+[Javascript Drum Kit] (https://erhanalgl.github.io/Patika-Bootcamp-Hafta-1/)
+
+# Ekran Görüntüleri
 
 ![Drum Kit Ekran Görüntüsü](./assets/drumkit.gif)
 
