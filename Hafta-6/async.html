@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript</title>
+</head>
+
+<body>
+    <!-- Asenkron programlama, JavaScript'in bir işlemi beklerken diğer işlemleri gerçekleştirmesine olanak tanır.
+    1) Callbacks = Callback fonksiyonlar, başka bir fonksiyonun tamamlanmasını bekleyen fonksiyonlardır.
+    2) Promises = Promises, asenkron işlemleri yönetmenin daha temiz bir yoludur. Bir Promise, işlemin başarılı olup olmadığını bildiren bir nesnedir.
+    3) Async/Await = Bir fonksiyondan önce gelen async anahtar sözcüğü, fonksiyonun bir promise döndürmesini sağlar. await anahtar sözcüğü yalnızca async işlevi içince kullanılır.
+    -->
+    <h1>Asynchronous JavaScript</h1>
+    <button id="callback">Callbacks</button>
+    <button id="promise">Promise</button>
+    <button id="async">Async</button>
+
+    <script>
+        // JavaScript Callbacks => bir callback kullanımında başka bir fonksiyona bir fonksityonu parametre olarak verip içeride ihtiyaç duyulduktan sonra çalıştırılmasını sağlamak.
+        function close() {
+            console.log("callback:close");
+        }
+        function signin() {
+            console.log("callback:signin");
+        }
+        function open(nextstep) {
+            console.log("callback:open");
+            setTimeout(function () {
+                nextstep();
+            }, 2000)
+        }
+
+        document.getElementById('callback').addEventListener('click', function () {
+            if (true) {
+                open(close)
+            } else {
+                open(signin)
+            }
+        })
+
+        // JavaScript Promises
+
+        function promise1() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('Promise 1')
+                }, 2000);
+            });
+        }
+
+        function promise2() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('Promise 2')
+                }, 3000);
+            });
+        }
+
+        // var promise = new Promise(function (resolve, reject) {
+        //     var data = 'getuser'
+
+        //     if (data) {
+        //         resolve()
+        //     } else {
+        //         reject('Error: No data');
+        //     }
+        // });
+
+        // promise.then(function (data) {
+        //     // redirect profile page
+        // }).catch(function (err) {
+        //     // redirect signin page
+        // })
+
+        document.getElementById('promise').addEventListener('click', function () {
+            promise1().then(function (value) {
+                console.log(value);
+            });
+            Promise.all([promise1(), promise2()]).then(function (values) {
+                console.log(values);
+            })
+            console.log('promise: click')
+        })
+
+        // JavaScript Async/Await
+
+        async function getposts() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve([
+                        {
+                            id: 1, title: 'HTML Nedir?',
+                            slug: 'html nedir',
+                            content: 'HTML, bir sayfa yapısının bir web sayfasının için yazılmış olduğu bir markup dili. Bir web sayfası için oluşturulan bir yapıyı bir web tarayıcısına yükleyip göstermek için kullanılan bir dildir.'
+                        },
+                        {
+                            id: 2, title: 'CSS Nedir?',
+                            slug: 'css-nedir',
+                            content: 'CSS, bir web sayfasının stil ve görünümü belirlemek için kullanılan bir dildir. HTML sayfasının içeriğini ve yapısını etkileyen özellikleri belirlemek için kullanılır.'
+                        }
+                    ])
+                }, 2000);
+            });
+        }
+
+        async function getuser() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve(
+                        {
+                            name: 'HTML Nedir?',
+                            surname: 'html nedir',
+                        },
+                    )
+                }, 2000);
+            });
+        }
+
+        async function getdata() {
+            var user = await getuser();
+            console.log('async:user', user);
+            var posts = await getposts();
+            console.log('async:posts', posts);
+        }
+
+        document.getElementById('async').addEventListener('click', function () {
+            try {
+                getdata();
+            } catch (err) {
+                console.error('async:error', err);
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>
