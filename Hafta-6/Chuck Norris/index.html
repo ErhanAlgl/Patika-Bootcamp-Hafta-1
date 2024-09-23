@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris</title>
+    <!-- Tailwind CSS 1 (htmlpreview.github.io'da düzgün çalışsın diye ekledim.) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS 2 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div class="p-8">
+            <h1 class="text-3xl font-medium text-gray-900 mb-2 text-center">Chuck Norris Jokes</h1>
+            <img src="./img/download.gif" alt="Chuck Norris icon" class="flex w-12 h-12 rounded-full shadow-md mx-auto">
+            <div class="border-t-2 border-gray-900 mb-6"></div>
+            <div class="bg-gray-100 rounded-2xl p-6 mb-6 min-h-[120px] flex items-center justify-center">
+                <p id="joke" class="text-gray-700 text-center">Joke loading...</p>
+            </div>
+            <button id="newJokeBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-full transition duraiton-300 ease-in-out transform hover:scale-105 focus:outline-none focus-ring-2 focus-ring-blue-500 focus-ring-opacity-50">New Joke</button>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
